@@ -9,7 +9,10 @@ class ExpenseItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Text(expense.title),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(expense.title),
+      ),
     );
   }
 }
