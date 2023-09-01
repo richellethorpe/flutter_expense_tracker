@@ -1,5 +1,6 @@
 import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
+import 'package:expense_tracker/models/expense.dart';
 
 class ExpenseItem extends StatelessWidget {
   const ExpenseItem(this.expense, {super.key});
@@ -22,9 +23,9 @@ class ExpenseItem extends StatelessWidget {
             //spacer is used in row or column to use all remaining space pushing elements to the right and left
             const Spacer(),
             Row(children: [
-              Icon(Icons.alarm),
+             Icon(categoryIcons[expense.category]),
               const SizedBox(width: 8,),
-              Text(expense.date.toString()),
+              Text(expense.formattedDate),
             ],)
 
             ],
